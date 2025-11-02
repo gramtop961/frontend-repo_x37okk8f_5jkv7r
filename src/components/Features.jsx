@@ -39,7 +39,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ type: 'spring', stiffness: 120 }}
-          className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl"
+          className="text-3xl font-bold tracking-tight text-white md:text-4xl"
         >
           Built for modern education analytics
         </motion.h2>
@@ -48,7 +48,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="mt-3 text-gray-600"
+          className="mt-3 text-gray-300"
         >
           Powerful features that help educators measure learning and empower outcomes.
         </motion.p>
@@ -64,16 +64,16 @@ export default function Features() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ delay: 0.05 * i, type: 'spring', stiffness: 160, damping: 18 }}
             whileHover={{ y: -4, rotateX: 0 }}
-            className="group relative rounded-2xl border border-blue-100/70 bg-white/60 p-6 backdrop-blur shadow-sm"
+            className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur shadow-sm"
           >
             <div className={`absolute right-6 top-6 h-12 w-12 rounded-xl bg-gradient-to-br ${color}`} />
             <div className="relative z-10">
-              <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-100 to-violet-100 p-3">
-                <Icon className="h-6 w-6 text-blue-600" />
+              <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-600/20 to-violet-600/20 p-3">
+                <Icon className="h-6 w-6 text-blue-300" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{desc}</p>
-              <div className="mt-5 inline-flex items-center text-sm font-medium text-blue-700">
+              <h3 className="text-lg font-semibold text-white">{title}</h3>
+              <p className="mt-2 text-sm text-gray-300">{desc}</p>
+              <div className="mt-5 inline-flex items-center text-sm font-medium text-blue-300">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Features() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold text-gray-900"
+          className="text-2xl font-bold text-white"
         >
           How it works
         </motion.h3>
@@ -99,21 +99,21 @@ export default function Features() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ type: 'spring', stiffness: 160, damping: 18 }}
-              className="rounded-2xl border border-blue-100/70 bg-white/60 p-6 backdrop-blur"
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-violet-500 text-white">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-violet-600 text-white">
                   {s.step}
                 </div>
-                <h4 className="text-base font-semibold text-gray-900">{s.title}</h4>
+                <h4 className="text-base font-semibold text-white">{s.title}</h4>
               </div>
-              <p className="mt-3 text-sm text-gray-600">{s.desc}</p>
+              <p className="mt-3 text-sm text-gray-300">{s.desc}</p>
             </motion.div>
           ))}
         </div>
-        <div className="mt-6 flex items-center gap-6 text-sm text-gray-600">
-          <div className="inline-flex items-center gap-2"><Shield className="h-4 w-4 text-blue-600" /> Secure by design</div>
-          <div className="inline-flex items-center gap-2"><BookOpen className="h-4 w-4 text-blue-600" /> Built for academics</div>
+        <div className="mt-6 flex items-center gap-6 text-sm text-gray-300">
+          <div className="inline-flex items-center gap-2"><Shield className="h-4 w-4 text-blue-300" /> Secure by design</div>
+          <div className="inline-flex items-center gap-2"><BookOpen className="h-4 w-4 text-blue-300" /> Built for academics</div>
         </div>
       </div>
 
@@ -123,11 +123,11 @@ export default function Features() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold text-gray-900"
+          className="text-2xl font-bold text-white"
         >
           Pricing
         </motion.h3>
-        <p className="mt-2 text-gray-600">Simple plans that scale with your institution.</p>
+        <p className="mt-2 text-gray-300">Simple plans that scale with your institution.</p>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           {[
             {
@@ -160,8 +160,8 @@ export default function Features() {
               transition={{ type: 'spring', stiffness: 160, damping: 18 }}
               className={`relative rounded-2xl border p-6 backdrop-blur ${
                 plan.highlight
-                  ? 'border-blue-300/70 bg-white/70 shadow-lg shadow-blue-500/10'
-                  : 'border-blue-100/70 bg-white/60'
+                  ? 'border-blue-300/30 bg-white/10 shadow-lg shadow-blue-500/10'
+                  : 'border-white/10 bg-white/5'
               }`}
             >
               {plan.highlight && (
@@ -169,10 +169,10 @@ export default function Features() {
                   Most Popular
                 </span>
               )}
-              <h4 className="text-lg font-semibold text-gray-900">{plan.name}</h4>
-              <div className="mt-2 text-3xl font-bold text-gray-900">{plan.price}</div>
-              <p className="mt-1 text-sm text-gray-600">{plan.desc}</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-700">
+              <h4 className="text-lg font-semibold text-white">{plan.name}</h4>
+              <div className="mt-2 text-3xl font-bold text-white">{plan.price}</div>
+              <p className="mt-1 text-sm text-gray-300">{plan.desc}</p>
+              <ul className="mt-4 space-y-2 text-sm text-gray-200">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-600" />
